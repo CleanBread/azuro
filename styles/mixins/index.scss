@@ -1,0 +1,21 @@
+@import './media.scss';
+
+@mixin flex(
+  $direction: row,
+  $alignment: normal,
+  $justification: normal,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justification;
+  align-items: $alignment;
+  flex-wrap: $wrap;
+}
+
+@mixin grid($columns: repeat(2, 1fr), $rows: 1fr, $gap: 10px) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-auto-rows: $rows;
+  gap: $gap;
+}

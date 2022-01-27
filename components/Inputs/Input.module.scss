@@ -1,0 +1,55 @@
+@import '../../styles/mixins';
+
+.title {
+  margin-bottom: 6px;
+  padding: 0 10px;
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+.content {
+  @include flex(row, center, space-between, nowrap);
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 16px 24px;
+  color: black;
+  resize: none;
+}
+
+.error {
+  position: absolute;
+  left: 10px;
+  top: calc(100% + 10px);
+  color: red;
+  @include flex(row, center, center, nowrap);
+  img {
+    max-width: 24px;
+    margin-right: 4px;
+  }
+}
+
+.subtitle {
+  padding: 0 10px;
+  margin-top: 5px;
+}
+.postfix {
+  padding-right: 24px;
+}
+.prefix {
+  padding: 15.5px 0 15.5px 24px;
+  & + input {
+    padding-left: 8px;
+    text-align: right;
+  }
+}

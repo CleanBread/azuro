@@ -1,0 +1,14 @@
+@import 'styles/mixins';
+
+.home {
+  padding: 50px 0;
+  &__form {
+    @include grid(1fr 1fr, auto, 20px);
+    @include b(tablet) {
+      @include grid(1fr, auto, 20px);
+    }
+  }
+  &__table {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'styles/mixins';
+
+.tx_table {
+  &__row {
+    @include grid(1fr 1fr 1fr 1fr);
+    grid-column-gap: 10px;
+    text-align: center;
+    & + & {
+      margin-top: 20px;
+    }
+  }
+}
