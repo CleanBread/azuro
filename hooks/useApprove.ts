@@ -25,11 +25,13 @@ const useApprove = ({
         const approveAmount = await walletService?.calcTransactionAmount(
           amount,
         );
-        await walletService?.usdtContract.approve(
+        const tx = await walletService?.usdtContract.approve(
           approvingAddress,
           approveAmount,
         );
+        await tx.wait();
         setApproving(false);
+        setApproved(true);
       } catch (err) {
         console.log(err, 'err');
         setApproving(false);
