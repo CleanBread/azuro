@@ -29,6 +29,7 @@ const useApprove = ({
           approvingAddress,
           approveAmount,
         );
+        setApproving(false);
       } catch (err) {
         console.log(err, 'err');
         setApproving(false);
