@@ -53,7 +53,7 @@ const useApprove = ({
 
         if (new BigNumber(result).isGreaterThan(0)) {
           const apprAmount = await walletService.weiToEth(result);
-          setApproved(new BigNumber(apprAmount).isGreaterThan(amount));
+          setApproved(new BigNumber(apprAmount).isGreaterThanOrEqualTo(amount));
         } else {
           setApproved(false);
         }
