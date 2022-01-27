@@ -195,7 +195,7 @@ const Home: NextPage<IHome> = ({ items }) => {
             btnText="Withdraw"
             available={stakingBalance}
             handleSubmit={handleWithdraw}
-            isLoading={isApproving || isWithdrawLoading}
+            isLoading={isWithdrawLoading}
           />
         </div>
         <div className={s.home__table}>
