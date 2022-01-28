@@ -31,7 +31,7 @@ export default (
       const tokenDecimals = await walletService?.usdtContract.decimals();
       setDecimals(tokenDecimals);
     }
-  }, [userAddress, walletService]);
+  }, [walletService]);
 
   useEffect(() => {
     getTokenDecimals();

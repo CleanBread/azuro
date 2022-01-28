@@ -144,11 +144,11 @@ const Home: NextPage<IHome> = ({ items }) => {
         }
       }
     },
-    [walletService, usdtDecimals],
+    [walletService],
   );
 
   React.useEffect(() => {
-    if (walletService) {
+    if (walletService && usdtDecimals) {
       walletService.provider.on(
         {
           address: Contracts.STAKING,
@@ -164,7 +164,7 @@ const Home: NextPage<IHome> = ({ items }) => {
         (event) => eventListener(event, 'Withdraw'),
       );
     }
-  }, [walletService, eventListener]);
+  }, [walletService, eventListener, usdtDecimals]);
 
   return (
     <div className={s.home}>
