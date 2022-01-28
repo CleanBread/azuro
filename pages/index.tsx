@@ -144,7 +144,7 @@ const Home: NextPage<IHome> = ({ items }) => {
         }
       }
     },
-    [walletService],
+    [walletService, usdtDecimals],
   );
 
   React.useEffect(() => {
