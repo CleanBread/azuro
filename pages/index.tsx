@@ -148,7 +148,7 @@ const Home: NextPage<IHome> = ({ items }) => {
   );
 
   React.useEffect(() => {
-    if (walletService && account) {
+    if (walletService) {
       walletService.provider.on(
         {
           address: Contracts.STAKING,
@@ -164,7 +164,7 @@ const Home: NextPage<IHome> = ({ items }) => {
         (event) => eventListener(event, 'Withdraw'),
       );
     }
-  }, [walletService, account, eventListener]);
+  }, [walletService, eventListener]);
 
   return (
     <div className={s.home}>
